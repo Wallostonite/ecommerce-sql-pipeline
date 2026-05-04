@@ -38,3 +38,4 @@ ready for Module 05 ETL.
 ---
 
 > Build your project from scratch using the teaching project as your reference.
+https://github.com/Wallostonite/ecommerce-pipeline.git
