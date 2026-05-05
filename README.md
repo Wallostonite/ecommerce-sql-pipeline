@@ -1,41 +1,40 @@
-# P03 ⭐⭐⭐ — Ecommerce SQL
-## The Darko Method 2026 | Student Project
+# 🛒 Ecommerce SQL Data Pipeline
 
----
+> A production-style SQL extraction & automation pipeline that consolidates fragmented ecommerce data into a unified, analysis-ready dataset. Built to demonstrate advanced querying, relational data modeling, and Python automation.
 
-## Your Brief
+## 📖 Overview
+This project simulates a real-world data analyst/engineer workflow: connecting to a live PostgreSQL database, writing optimized SQL to join and aggregate data across five core tables, and automating the export process via Python. The final output (`raw-data.csv`) serves as the foundational dataset for downstream revenue forecasting, customer segmentation, and BI reporting.
 
-**Company:** ShopStream Global
-**Your role:** Data Analyst
+## 🛠 Tech Stack
+- **Database:** PostgreSQL (hosted on Supabase)
+- **Query Language:** Advanced SQL (CTEs, Window Functions, Multi-table Joins, Aggregations)
+- **Automation:** Python (`psycopg2`, `pandas`, `csv`)
+- **Environment:** `.env` for secure credential management
+- **Version Control:** Git & GitHub
 
-ShopStream's Chief Data Officer needs a comprehensive raw data extract combining
-orders, customer profiles, product details, seller information, and review scores
-into one flat file for revenue forecasting and customer segmentation.
+## 📊 Database Schema
+All queries target the `ecommerce` schema:
+| Table        | Purpose                                  |
+|--------------|------------------------------------------|
+| `orders`     | Transaction records, dates, status       |
+| `customers`  | Demographics, account details, location  |
+| `products`   | SKUs, categories, pricing, inventory     |
+| `sellers`    | Vendor profiles, onboarding, regions     |
+| `reviews`    | Customer feedback, ratings, timestamps   |
 
-Your job is to connect to the Supabase database, write SQL queries against the
-`ecommerce` schema, and produce `raw-data.csv`.
+## ✨ Key Features & SQL Techniques
+- **Five-Table Consolidation:** One row per order, enriched with customer, product, seller, and review context
+- **Business Metrics Aggregation:**
+  - Revenue by seller
+  - Return rates by product category
+  - Average review scores per seller
+- **Advanced Query Patterns:**
+  - ✅ Common Table Expressions (CTEs) for modular, readable logic
+  - ✅ Window functions (`RANK()`, `SUM() OVER()`) to rank customers by lifetime spend
+- **Automated Export:** Python script executes queries, manages connections, and writes a clean `raw-data.csv`
 
-**Schema:** `ecommerce`
-**Key tables:** `orders`, `customers`, `products`, `sellers`, `reviews`
-
-**Deliverable:** `data/raw-data.csv` — a fully joined five-table extract,
-ready for Module 05 ETL.
-
----
-
-## Success Criteria
-
-- [ ] All five tables queried and understood individually
-- [ ] Aggregation queries show: revenue by seller, return rates by product category,
-  average review score per seller
-- [ ] A five-table join produces one row per order with customer, product, seller,
-  and review data
-- [ ] At least two advanced queries: one CTE, one window function ranking customers
-  by total spend
-- [ ] `python run.py` saves `raw-data.csv`
-- [ ] Project pushed to GitHub
-
----
-
-> Build your project from scratch using the teaching project as your reference.
-https://github.com/Wallostonite/ecommerce-pipeline.git
+## 🚀 How to Run Locally
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/ecommerce-sql-pipeline.git
+   cd ecommerce-sql-pipeline
