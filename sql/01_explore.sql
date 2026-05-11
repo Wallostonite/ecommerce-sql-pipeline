@@ -1,24 +1,24 @@
 -- ============================================================
 -- 01_explore.sql  —  Individual table exploration
--- Schema: ecommerce
+-- Schema: {industry}   (replaced at runtime by SQLQueryRunner)
 -- ============================================================
 
 -- Orders
-SELECT * FROM ecommerce.orders LIMIT 10;
-SELECT COUNT(*) AS total_orders FROM ecommerce.orders;
+SELECT * FROM {industry}.orders LIMIT 10;
+SELECT COUNT(*) AS total_orders FROM {industry}.orders;
 
 -- Customers
-SELECT * FROM ecommerce.customers LIMIT 10;
-SELECT COUNT(*) AS total_customers FROM ecommerce.customers;
+SELECT * FROM {industry}.customers LIMIT 10;
+SELECT COUNT(*) AS total_customers FROM {industry}.customers;
 
 -- Products
-SELECT * FROM ecommerce.products LIMIT 10;
-SELECT COUNT(*) AS total_products FROM ecommerce.products;
+SELECT * FROM {industry}.products LIMIT 10;
+SELECT COUNT(*) AS total_products FROM {industry}.products;
 
 -- Sellers
-SELECT * FROM ecommerce.sellers LIMIT 10;
-SELECT COUNT(*) AS total_sellers FROM ecommerce.sellers;
+SELECT * FROM {industry}.sellers LIMIT 10;
+SELECT COUNT(*) AS total_sellers FROM {industry}.sellers;
 
 -- Reviews
-SELECT * FROM ecommerce.reviews LIMIT 10;
-SELECT COUNT(*) AS total_reviews FROM ecommerce.reviews;
+SELECT * FROM {industry}.reviews LIMIT 10;
+SELECT COUNT(*) AS total_reviews FROM {industry}.reviews;
