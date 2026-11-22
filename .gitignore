@@ -6,3 +6,7 @@ sql-env/
 venv/
 data/*.csv
 .DS_Store
+
+# Local virtual environments
+ecom-extract-env/
+*-env/
